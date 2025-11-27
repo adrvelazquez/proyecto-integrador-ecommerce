@@ -1,0 +1,16 @@
+ecommerce:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: host.docker.internal
+      port: 5432
+      user: postgres
+      password: "{{ env_var('PG_ECOMMERCE_PWD') }}"
+      dbname: EcommerceDB
+      schema: dbt
+      threads: 4
+      keepalives_idle: 0
+      connect_timeout: 10
+      search_path: public
+      sslmode: prefer

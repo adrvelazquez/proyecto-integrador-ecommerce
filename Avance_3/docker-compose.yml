@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:latest
+    container_name: dbt_ecommerce
+    working_dir: /usr/app/dbt_ecommerce
+    volumes:
+      - ./:/usr/app
+    environment:
+      - DBT_PROFILES_DIR=/usr/app/profiles
+      # Variable de entorno con la contraseña de PostgreSQL (se toma del archivo .env, no va en el código)
+      - PG_ECOMMERCE_PWD=${PG_ECOMMERCE_PWD}
+    entrypoint: ["tail", "-f", "/dev/null"]
+    ports:
+      - "8080:8080"

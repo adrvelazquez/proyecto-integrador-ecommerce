@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    schema: public
+    tables:
+      - name: usuarios
+      - name: categorias
+      - name: productos
+      - name: ordenes
+      - name: detalle_ordenes
+      - name: direcciones_envio
+      - name: carrito
+      - name: metodos_pago
+      - name: ordenes_metodospago
+      - name: resenas_productos
+      - name: historial_pagos

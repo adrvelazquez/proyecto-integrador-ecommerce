@@ -1,0 +1,13 @@
+# Librerías para conexión y ORM
+sqlalchemy
+psycopg2-binary
+
+# Análisis de datos y visualización
+pandas
+matplotlib
+
+# Manejo de credenciales vía archivo .env
+python-dotenv
+
+# Kernel para notebooks en VS Code / Jupyter
+ipykernel

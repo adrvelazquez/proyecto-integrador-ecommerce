@@ -1,0 +1,30 @@
+name: 'dbt_ecommerce'
+version: '1.0.0'
+config-version: 2
+
+# Nombre del profile definido en profiles.yml
+profile: 'ecommerce'
+
+# Carpeta donde dbt va a buscar los modelos (.sql)
+model-paths: ["models"]
+
+# Carpeta donde dbt escribe archivos generados (no hace falta tocarla)
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  dbt_ecommerce:
+    # Modelos de la capa staging: vistas en el esquema dbt_staging
+    staging:
+      +schema: staging
+      +materialized: view
+
+    # Modelos de la capa intermedia: tablas en el esquema dbt_interm
+    interm:
+      +schema: interm
+      +materialized: table
+
+    # Modelos de la capa de marts: tablas finales en el esquema dbt_marts
+    marts:
+      +schema: marts
+      +materialized: table
