@@ -16,12 +16,12 @@ Este repositorio contiene el desarrollo completo del proyecto integrador de un e
 
 La solución sigue una lógica de capas:
 
-- **Capa raw (public):** tablas originales cargadas desde 11 archivos CSV (usuarios, productos, categorías, órdenes, pagos, reseñas, etc.). :contentReference[oaicite:4]{index=4}  
-- **Capa analítica en PostgreSQL (esquema `avance2`):** implementación física del modelo en estrella definido en el Avance 2 (dimensiones D_* y hechos F_*). :contentReference[oaicite:5]{index=5}  
-- **Capa dbt (esquemas `dbt_staging`, `dbt_interm`, `dbt_marts`):** modelos SQL gestionados por dbt, con materializaciones, tests y lineage. :contentReference[oaicite:6]{index=6}  
+- **Capa raw (public):** tablas originales cargadas desde 11 archivos CSV (usuarios, productos, categorías, órdenes, pagos, reseñas, etc.) 
+- **Capa analítica en PostgreSQL (esquema `avance2`):** implementación física del modelo en estrella definido en el Avance 2 (dimensiones D_* y hechos F_*).
+- **Capa dbt (esquemas `dbt_staging`, `dbt_interm`, `dbt_marts`):** modelos SQL gestionados por dbt, con materializaciones, tests y lineage.
 - **Capa de presentación:** 
   - DBT Docs (documentación navegable + lineage).
-  - App de Streamlit conectada a EcommerceDB para responder preguntas de negocio sobre ventas, productos, clientes y métodos de pago. :contentReference[oaicite:7]{index=7}  
+  - App de Streamlit conectada a EcommerceDB para responder preguntas de negocio sobre ventas, productos, clientes y métodos de pago.
 
 ---
 
